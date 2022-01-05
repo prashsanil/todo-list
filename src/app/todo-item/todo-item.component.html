@@ -1,0 +1,17 @@
+<div class="todo-item" [class.completed]="todo.completed">
+  <div class="check-box">
+    <i class="material-icons">check</i>
+  </div>
+  <div class="todo-text">
+    {{ todo.text }}
+  </div>
+  <!-- edit icons -->
+  <div class="todo-controls-box" (click)="$event.stopPropagation()"> <!-- stop propagation of the same event from being called. -->
+    <div class="todo-control-button is-primary" appTooltip ="Edit Todo" (click)="onEditClicked()">
+      <i class="material-icons">edit</i>
+    </div>
+    <div class="todo-control-button is-danger" appTooltip ="Delete Todo" (click)="onDeleteClicked()">
+      <i class="material-icons">delete</i>
+    </div>
+  </div>
+</div>
